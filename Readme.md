@@ -1,21 +1,21 @@
 # Invisible Valuables Mod
 
-Este es un mod simple para el juego R.E.P.O. diseñado para creadores de contenido.
+This is a simple mod for the game R.E.P.O. designed for content creators.
 
-## ¿Qué hace?
+## What does it do?
 
-El mod hace que todos los valuables sean completamente invisibles. Sin embargo, sus colisionadores siguen existiendo, por lo que pueden ser recogidos por el jugador y extraídos por el Punto de Extracción
+The mod makes all valuables completely invisible. However, their colliders still exist, so they can be picked up by the player and extracted through the Extraction Point.
 
-## Uso Principal
+## Main Use
 
-Es ideal para grabar vídeos y conseguir tomas limpias del rayo de extracción funcionando sin que los objetos desordenen la escena.
+It’s ideal for recording videos and getting clean shots of the extraction beam in action without objects cluttering the scene.
 
-**¡ADVERTENCIA!** Este mod hace que el juego sea prácticamente imposible de jugar de forma normal, ya que no podrás ver dónde están los objetos para recogerlos. Úsalo solo para fines cinematográficos.
+**¡ADVERTENCIA!** This mod makes the game virtually unplayable in a normal way, as you won’t be able to see where the items are to collect them. Use it only for cinematic purposes.
 
-## Instalación
+## Installation
 
-Se recomienda instalar usando r2modman o el Thunderstore Mod Manager.
+It is recommended to install using r2modman or the Thunderstore Mod Manager.
 
-## Código Fuente
+## Source Code
 
-El código está disponible en [GitHub](https://github.com/TU_USUARIO/TU_REPOSITORIO).
+The code is available on [GitHub](https://github.com/Gambrinus69/REPO-InvisibleValuablesMod).
