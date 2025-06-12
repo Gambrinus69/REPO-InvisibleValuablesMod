@@ -1,0 +1,9 @@
+{
+  "name": "InvisibleValuables",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/Gambrinus69/REPO-InvisibleValuablesMod/", 
+  "description": "Hace que todos los objetos de valor (valuables) sean invisibles. Ideal para tomas cinematográficas.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ]
+}
