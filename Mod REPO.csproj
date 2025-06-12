@@ -1,9 +1,39 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>Mod_REPO</RootNamespace>
-    <Nullable>enable</Nullable>
+    <!-- He actualizado el nombre a "InvisibleValuables" como pediste antes -->
+    <AssemblyName>InvisibleValuables</AssemblyName> 
+    <Description>Un mod para R.E.P.O. que hace invisibles los objetos de valor.</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
+
+  <!-- BLOQUE DE REFERENCIAS CORREGIDO -->
+  <ItemGroup>
+    <!-- Referencia a BepInEx (Usando tu ruta del perfil de Thunderstore) -->
+    <Reference Include="BepInEx">
+      <HintPath>C:\Users\cabez\AppData\Roaming\Thunderstore Mod Manager\DataFolder\REPO\profiles\Practice\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+
+    <!-- Referencias de Unity (Usando tu ruta de la carpeta del juego) -->
+    <Reference Include="UnityEngine">
+      <HintPath>L:\SteamLibrary\steamapps\common\REPO\REPO_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>L:\SteamLibrary\steamapps\common\REPO\REPO_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    
+    <!-- Referencia al código del juego (Usando tu ruta de la carpeta del juego) -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>L:\SteamLibrary\steamapps\common\REPO\REPO_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <!-- Este bloque se mantiene igual, es una buena práctica -->
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
 
 </Project>
