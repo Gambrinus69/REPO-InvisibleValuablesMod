@@ -4,17 +4,17 @@ using BepInEx.Logging;
 using UnityEngine;
 using System.Collections;
 
-// El namespace de tu mod.
+// El namespace del mod.
 namespace InvisibleValuables
 {
-    // El atributo principal que define tu mod para BepInEx.
+    // El atributo principal que define el mod para BepInEx.
     [BepInPlugin(
         "com.Gambrinus.InvisibleValuables",  // ID único del plugin (GUID)
         "InvisibleValuables",                // Nombre del Mod
         "1.0.2"                              // Versión del Mod
     )]
     
-    // La clase principal de tu plugin, que hereda de BaseUnityPlugin.
+    // La clase principal del plugin, que hereda de BaseUnityPlugin.
     public class InvisibleValuablesPlugin : BaseUnityPlugin
     {
         // Awake se llama una vez cuando el plugin es cargado por BepInEx.
