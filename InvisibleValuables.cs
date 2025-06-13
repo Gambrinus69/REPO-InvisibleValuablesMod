@@ -1,39 +1,57 @@
-// 1. Cambiar el namespace
+// Directivas 'using' explícitas para asegurar que las librerías se reconocen.
+using BepInEx;
+using BepInEx.Logging;
+using UnityEngine;
+using System.Collections;
+
+// El namespace de tu mod.
 namespace InvisibleValuables
 {
-    // Atributos de BepInEx
+    // El atributo principal que define tu mod para BepInEx.
     [BepInPlugin(
-        "com.Gambrinus.InvisibleValuables",  // 2. Cambiar el ID del plugin
-        "InvisibleValuables",                // 3. Cambiar el nombre público del mod
-        "1.0.0"                              // Versión del mod
+        "com.Gambrinus.InvisibleValuables",  // ID único del plugin (GUID)
+        "InvisibleValuables",                // Nombre del Mod
+        "1.0.1"                              // Versión del Mod
     )]
     
-    // 4. Cambiar el nombre de la clase
+    // La clase principal de tu plugin, que hereda de BaseUnityPlugin.
     public class InvisibleValuablesPlugin : BaseUnityPlugin
     {
+        // Awake se llama una vez cuando el plugin es cargado por BepInEx.
         private void Awake()
         {
-            // El mensaje del logger también se puede actualizar para que coincida
-            Logger.LogInfo("Mod InvisibleValuables cargado y activo!");
+            // Escribe un mensaje en la consola de BepInEx para confirmar la carga.
+            Logger.LogInfo("Mod InvisibleValuables loaded and is now active!");
+            
+            // Inicia la corrutina que se ejecutará en segundo plano.
             StartCoroutine(HideItemsCoroutine());
         }
 
+        // Una Corrutina que se ejecuta periódicamente sin bloquear el juego.
         private IEnumerator HideItemsCoroutine()
         {
+            // Un bucle infinito que se repetirá mientras el juego esté en ejecución.
             while (true)
             {
-                var allItems = FindObjectsOfType<ValuableObject>();
+                // Busca todos los objetos en la escena que tengan el componente 'ValuableObject'.
+                ValuableObject[] allItems = FindObjectsOfType<ValuableObject>();
 
-                foreach (var item in allItems)
+                // Itera sobre cada uno de los objetos encontrados.
+                foreach (ValuableObject item in allItems)
                 {
-                    MeshRenderer renderer = item.gameObject.GetComponentInChildren<MeshRenderer>();
+                    // Busca el componente 'MeshRenderer' en el objeto o en cualquiera de sus hijos.
+                    MeshRenderer renderer = item.GetComponentInChildren<MeshRenderer>();
 
+                    // Si se encuentra un renderizador y está actualmente visible...
                     if (renderer != null && renderer.enabled)
                     {
+                        // ...lo desactiva, haciéndolo invisible.
                         renderer.enabled = false;
                     }
                 }
 
+                // Pausa la ejecución de esta corrutina durante 5 segundos antes de volver a empezar el bucle.
+                // Esto es mucho más eficiente que hacerlo en cada frame.
                 yield return new WaitForSeconds(5.0f);
             }
         }
