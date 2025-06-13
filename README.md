@@ -10,7 +10,7 @@ The mod makes all valuables completely invisible. However, their colliders still
 
 It’s ideal for recording videos and getting clean shots of the extraction beam in action without objects cluttering the scene.
 
-**¡ADVERTENCIA!** This mod makes the game virtually unplayable in a normal way, as you won’t be able to see where the items are to collect them. Use it only for cinematic purposes.
+**WARNING!** This mod makes the game virtually unplayable in a normal way, as you won’t be able to see where the items are to collect them. Use it only for cinematic purposes.
 
 ## Installation
 
