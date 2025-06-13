@@ -11,7 +11,7 @@ namespace InvisibleValuables
     [BepInPlugin(
         "com.Gambrinus.InvisibleValuables",  // ID único del plugin (GUID)
         "InvisibleValuables",                // Nombre del Mod
-        "1.0.1"                              // Versión del Mod
+        "1.0.2"                              // Versión del Mod
     )]
     
     // La clase principal de tu plugin, que hereda de BaseUnityPlugin.
